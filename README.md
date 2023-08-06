@@ -9,20 +9,14 @@ For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.
 
 ![login](https://github.com/DNadas98/project_showroom/blob/main/img/login.jpg)
 - (only accepts my admin account, which is not this example account)
-
-### Admin page
-
+### Overview of the projects
 ![admin 1](https://github.com/DNadas98/project_showroom/blob/main/img/admin01.jpg)
-- Overview of the projects
-  
+### Overview of the project files
 ![admin 2](https://github.com/DNadas98/project_showroom/blob/main/img/admin02.jpg)
-- Overview of the project files
-  
+### Project file editor form
 ![admin 3](https://github.com/DNadas98/project_showroom/blob/main/img/admin03.jpg)
-- Project file editor form
-  
+### Account settings
 ![admin 4](https://github.com/DNadas98/project_showroom/blob/main/img/admin04.jpg)
-- Account settings
 
 # Configure, Install and Run
 
