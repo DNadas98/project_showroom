@@ -133,12 +133,12 @@ npm run build
 
 ### Public page
 
-![about me](/img/aboutme.jpg) ![showroom 1](/img/projectshowroom01.jpg) ![showroom 2](/img/projectshowroom02.jpg)
+![about me](https://github.com/DNadas98/project_showroom/blob/main/img/aboutme.jpg) ![showroom 1](https://github.com/DNadas98/project_showroom/blob/main/img/projectshowroom01.jpg) ![showroom 2](https://github.com/DNadas98/project_showroom/blob/main/img/projectshowroom02.jpg)
 
 ### Login page
 
-![login](/img/login.jpg)
+![login](https://github.com/DNadas98/project_showroom/blob/main/img/login.jpg)
 
 ### Admin page
 
-![admin 1](/img/admin01.jpg) ![admin 2](/img/admin02.jpg) ![admin 3](/img/admin03.jpg)
+![admin 1](https://github.com/DNadas98/project_showroom/blob/main/img/admin01.jpg) ![admin 2](https://github.com/DNadas98/project_showroom/blob/main/img/admin02.jpg) ![admin 3](https://github.com/DNadas98/project_showroom/blob/main/img/admin03.jpg)
