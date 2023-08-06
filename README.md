@@ -4,6 +4,23 @@ A [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) integ
 My application stores project data such as the username, project name and data for the code snippets of the projects in the database. The details of the projects and the source code for the snippets are fetched dynamically from the GitHub API based on the stored data. This ensures that the displayed information is always up-to-date and allows for simple management of the projects on the administrator page.  
 For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) and [Docker Compose](https://docs.docker.com/compose/) for containerization.
 
+# Preview of the admin dashboard
+### Login page
+
+![login](https://github.com/DNadas98/project_showroom/blob/main/img/login.jpg)
+- (only accepts my admin account, which is not this example account)
+
+### Admin page
+
+![admin 1](https://github.com/DNadas98/project_showroom/blob/main/img/admin01.jpg)
+- overview of the projects
+  
+![admin 2](https://github.com/DNadas98/project_showroom/blob/main/img/admin02.jpg)
+- overview of the project files
+  
+![admin 3](https://github.com/DNadas98/project_showroom/blob/main/img/admin03.jpg)
+- account settings
+
 # Configure, Install and Run
 
 ### Backend access, refresh token secret:
@@ -128,17 +145,3 @@ npm run build
 # Copy the built files and static folder to frontend/server/view
 # The frontend serves the view/index.html and the view/static folder
 ```
-
-# Preview
-
-### Public page
-
-![about me](https://github.com/DNadas98/project_showroom/blob/main/img/aboutme.jpg) ![showroom 1](https://github.com/DNadas98/project_showroom/blob/main/img/projectshowroom01.jpg) ![showroom 2](https://github.com/DNadas98/project_showroom/blob/main/img/projectshowroom02.jpg)
-
-### Login page
-
-![login](https://github.com/DNadas98/project_showroom/blob/main/img/login.jpg)
-
-### Admin page
-
-![admin 1](https://github.com/DNadas98/project_showroom/blob/main/img/admin01.jpg) ![admin 2](https://github.com/DNadas98/project_showroom/blob/main/img/admin02.jpg) ![admin 3](https://github.com/DNadas98/project_showroom/blob/main/img/admin03.jpg)
