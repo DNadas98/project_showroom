@@ -1,0 +1,64 @@
+[
+  {
+    "user": "DNadas98",
+    "repo": "node_server",
+    "readme": {
+      "path": "readme.md",
+      "language": "markdown"
+    },
+    "files": [
+      {
+        "name": "server",
+        "path": "backend/server.js",
+        "language": "javascript",
+        "description": "A simple event-driven Node.js http server created to serve static files. The MIME type and file path are dinamically set based on the file extension. Basic 404 and 500 error handling is included."
+      },
+      {
+        "name": "logEvents",
+        "path": "backend/middleware/logger.js",
+        "language": "javascript",
+        "startLine": 6,
+        "endLine": 18,
+        "description": "The logEvents function is responsible for logging server side events, such as incoming requests, sent responses and server error events into their separate log file. If the folder or the log file does not exist yet, it creates them first, otherwise it appends the log messages to the existing file."
+      }
+    ]
+  },
+  {
+    "user": "DNadas98",
+    "repo": "express_server",
+    "readme": {
+      "path": "README.md",
+      "language": "markdown"
+    },
+    "files": [
+      {
+        "name": "server-1",
+        "path": "server.js",
+        "language": "javascript",
+        "startLine": 14,
+        "endLine": 38,
+        "description": "This code snippet starts with the middleware setup, where the CORS (Cross Origin Resource Sharing), helmet (HTTP security headers), rate limiter and banned origins check are handled. Built-in middlewares are added to handle form data, json data and serving of static files. Then a custom request logger middleware is used, and finally the index.html is served to the client."
+      },
+      {
+        "name": "server-2",
+        "path": "server.js",
+        "language": "javascript",
+        "startLine": 46,
+        "endLine": 79,
+        "description": "This code snippet displays my implementation of error handlers for 404 (Not Found) and 500 (Internal Server Error). The appropriate status code and an error page or error message is sent to the client, depending on the client's acceptable MIME type. This piece of code guarantees, that the server responds appropriately to all errors, logs the full detailed information, but only sends a standard error response to the client to avoid exposing details about the inner workings of the backend."
+      },
+      {
+        "name": "corsConfig",
+        "path": "config/corsConfig.js",
+        "language": "javascript",
+        "description": "This is the CORS (Cross-Origin Resource Sharing) configuration used in my server. It controls which web domains are allowed to access resources on the server and specifies the allowed HTTP methods. The origin function is modified to allow an undefined request origin for localhost development, and to call the error logger in case of a CORS block."
+      },
+      {
+        "name": "helmetConfig",
+        "path": "config/helmetConfig.js",
+        "language": "javascript",
+        "description": "This is my header configuration for the helmet middleware. Content Security Policy defines the allowed source of different content types. It is limited to the server's origin, but other trusted sources can also be added later. The HSTS ( HTTP Strict Transport Security) enforces secure connections for potential HTTPS deployment. The referrer setting controls Referer header behavior to limit potential data leakage. The frameguard setting is used to combat clickjacking attacks."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+Paste generated private key here and rename to localhost.key. (see README.md)
+Format: 
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----

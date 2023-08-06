@@ -1,0 +1,153 @@
+.AboutMe img {
+  height: 3rem;
+  width: 3rem;
+  min-height: 30px;
+  min-width: 30px;
+}
+
+.profile img {
+  height: 13rem;
+  width: 13rem;
+  min-height: 13rem;
+  min-width: 13rem;
+  border-radius: calc(100% / 2);
+  display: inline;
+  margin-top: 2rem;
+}
+
+ul {
+  max-width: fit-content;
+}
+
+li p {
+  text-align: left;
+}
+
+li .codecool {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.codecool {
+  padding: 0;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+  flex-wrap: wrap;
+}
+
+.codecool * {
+  height: 100%;
+  white-space: pre-wrap;
+}
+
+.codecool img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.profile {
+  justify-content: left;
+  text-align: left;
+  width: fit-content;
+}
+
+.AboutMe ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.AboutMe ul p {
+  padding-bottom: 1rem;
+}
+
+.AboutMe ul ul {
+  padding-left: 2rem;
+  list-style: circle;
+  gap: 1rem;
+}
+
+.AboutMe li {
+  white-space: normal;
+}
+
+.techStack.row {
+  justify-content: first baseline;
+}
+
+@media screen and (max-width: 800px) {
+  .AboutMe {
+    margin: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .AboutMe img {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    min-height: 20px;
+    min-width: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile img {
+    height: 10rem;
+    width: 10rem;
+    min-height: 10rem;
+    min-width: 10rem;
+    border-radius: calc(100% / 2);
+    display: flex;
+    margin-top: 0;
+  }
+
+  .codecool {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .AboutMe ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .AboutMe ul p {
+    padding-bottom: 1rem;
+  }
+
+  .AboutMe ul ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .AboutMe li {
+    white-space: normal;
+  }
+
+  .techStack.row {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,5 @@
+Paste generated certificate here and rename to localhost.crt. (see README.md)
+Format: 
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----

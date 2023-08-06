@@ -1,0 +1,310 @@
+.Info {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.GitRepoData {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.GitRepoData * {
+  width: fit-content;
+}
+
+.GitRepoTitle {
+  text-align: left;
+  padding: 0;
+  gap: 1rem;
+  justify-content: left;
+  align-items: center;
+}
+
+.GitRepoTitle .column {
+  text-align: left;
+  padding: 0;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.GitRepoTitle img {
+  max-width: 6rem;
+  max-height: 6rem;
+  border: 1px transparent;
+  border-radius: 50%;
+}
+
+.GitRepoTitle h1 {
+  font-size: 3rem;
+}
+
+.GitRepoTitle h2 {
+  font-size: 2rem;
+}
+
+.GitRepoDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  text-align: left;
+  width: fit-content;
+  height: fit-content;
+}
+
+.GitRepoDetails table {
+  max-width: fit-content;
+  border: none;
+}
+
+.GitRepoDetails table * {
+  padding: 0;
+  margin: 0;
+}
+
+.right {
+  text-align: right;
+}
+
+td.right {
+  padding-right: 1rem;
+}
+
+span {
+  width: fit-content;
+  white-space: pre-wrap;
+}
+
+.GitContent {
+  padding: 1rem 0;
+}
+
+.GitContent p {
+  text-align: justify;
+}
+
+.GitRepoDetails,
+.GitMarkdownContent {
+  color: var(--light);
+  background: transparent;
+  text-shadow: 1px 1px 2px var(--dark);
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.GitCodeContent {
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 1.5;
+}
+.GitCodeContent pre {
+  border: 2px solid var(--mid);
+  border-radius: 1rem;
+}
+
+.GitMarkdownContent {
+  --codeColor: blurrywood;
+  border: none;
+  padding: 0;
+}
+
+.GitMarkdownContent * {
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.ReactMarkdown ul {
+  padding-left: 2rem;
+}
+
+.GitMarkdownContent .GitMarkdownContent .ReactMarkdown ul:has(p) {
+  list-style: none;
+}
+
+.ReactMarkdown code {
+  color: var(--codeColor);
+}
+
+.ReactMarkdown a {
+  opacity: 1;
+  transition: var(--transitionSpeed);
+}
+
+.ReactMarkdown a:hover {
+  opacity: 0.75;
+}
+
+.ReactMarkdown a:active {
+  opacity: 0.5;
+}
+
+.Projects table,
+.ProjectFilesTable {
+  white-space: nowrap;
+  width: 80vw;
+  text-align: left;
+  padding: 1rem;
+  border-collapse: collapse;
+}
+.Projects table {
+  max-width: 40rem;
+}
+.ProjectFilesTable {
+  max-width: 35rem;
+}
+
+.Projects td,
+.ProjectFilesTable td {
+  padding: 1rem;
+  border-collapse: collapse;
+  border-top: 2px solid var(--mid);
+}
+
+.Projects th,
+.ProjectFilesTable th {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.Projects table .Repo,
+.ProjectFilesTable .Name {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .Info {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .GitRepoData {
+    flex-wrap: wrap;
+  }
+
+  .GitRepoData * {
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+
+  .GitRepoTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .GitRepoTitle .column {
+    text-align: center;
+    align-items: center;
+  }
+
+  .GitRepoTitle img {
+    max-width: 6rem;
+    max-height: 6rem;
+  }
+
+  .GitRepoTitle h1 {
+    font-size: 1.8rem;
+  }
+
+  .GitRepoTitle h2 {
+    font-size: 1.2rem;
+  }
+
+  .GitRepoDetails {
+    font-size: 1rem;
+  }
+
+  .GitRepoDetails table {
+    width: fit-content;
+    max-width: 80vh;
+  }
+
+  .GitRepoDetails,
+  .GitMarkdownContent {
+    font-size: 1rem;
+    max-width: 20rem;
+  }
+
+  div.GitContent *:not(ul) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 80vw;
+  }
+
+  .GitCodeContent pre {
+    font-size: 1rem;
+    max-width: 80vw;
+  }
+
+  span {
+    width: fit-content;
+    white-space: pre-wrap;
+  }
+
+  .GitMarkdownContent * {
+    white-space: normal;
+    word-wrap: normal;
+  }
+
+  .Projects table,
+  .ProjectFilesTable {
+    white-space: pre-wrap;
+    width: unset;
+    width: 80vw;
+    max-width: 80vw;
+    text-align: left;
+    padding: 0;
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+  }
+
+  .Projects table td,
+  .Projects table th,
+  .ProjectFilesTable table td,
+  .ProjectFilesTable table th {
+    padding: 0;
+    width: fit-content;
+    max-width: 5rem;
+    word-wrap: break-all;
+  }
+  .Projects table h1,
+  .ProjectFilesTable h1 {
+    font-size: 1rem;
+  }
+
+  .Projects table h2,
+  .ProjectFilesTable h2 {
+    font-size: 1rem;
+  }
+
+  .Projects table h3,
+  .ProjectFilesTable h3 {
+    font-size: 1rem;
+  }
+
+  .Projects th,
+  .ProjectFilesTable th,
+  .Projects td,
+  .ProjectFilesTable td {
+    padding: 0.5rem;
+    width: fit-content;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  .Projects table .Repo,
+  .ProjectFilesTable .Name {
+    padding-left: 0.5rem;
+  }
+}
