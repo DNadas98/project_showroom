@@ -12,7 +12,7 @@ For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.
   ```js
   require("crypto").randomBytes(64).toString("hex");
   ```
-- paste: /env/backend.env.dev
+- paste: `/env/backend.env.dev` (rename the txt)
 
 ### SSL localhost key & cert
 
@@ -32,14 +32,17 @@ For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.
   openssl x509 -req -days 365 -in localhost.csr -signkey localhost.key -out localhost.crt # SSL certificate
 ```
 
+- Add to `/ssl` folder
+
 ### Github API token
 
 - [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
-- Add to env/frontend.env.dev: `OPEN_API_TOKEN`
+- Add to `env/frontend.env.dev` (rename the txt): `OPEN_API_TOKEN`
 
 ### Configure MongoDB single node replica set
 
-- mongod.conf:
+- Find `mongod.conf` of your local mongoDB server
+- Uncomment / paste:
 
 ```bash
 replication:
@@ -95,6 +98,10 @@ db.users.find();
 cd backend/model/populate
 npm run populate
 ```
+
+### Configure React app
+
+- rename `frontend/client/_env.txt` to `.env`
 
 ### Install & Run
 

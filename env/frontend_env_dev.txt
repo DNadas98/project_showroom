@@ -1,3 +1,4 @@
+# Add API token and rename to frontend.env.dev
 NODE_ENV=developement
 DOMAIN=localhost
 

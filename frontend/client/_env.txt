@@ -1,3 +1,4 @@
+#rename to .env
 #dev
 PORT=3001
 REACT_APP_DEV_API_URL=https://localhost:5000/api

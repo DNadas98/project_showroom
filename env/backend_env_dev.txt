@@ -1,3 +1,4 @@
+# Add token secrets and rename to backend.env.dev
 NODE_ENV=developement
 DOMAIN=localhost
 
