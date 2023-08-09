@@ -5,7 +5,6 @@ const express = require("express");
 const cors = require("cors");
 const corsConfig = require("./config/corsConfig");
 const { logRequest, logServed, logError } = require("./middleware/logger");
-const openApiRouter = require("./routes/openApiRouter");
 
 //only for dev
 require("dotenv").config({ path: path.join(__dirname, "../../env/frontend.env.dev") });
@@ -21,9 +20,6 @@ server.use(express.json());
 
 //Request logger middleware
 server.use(logRequest);
-
-//Routing
-server.use("/forward", openApiRouter);
 
 //serve build
 server.use("/static", express.static(path.join(__dirname, "view/static")));

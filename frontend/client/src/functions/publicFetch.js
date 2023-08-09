@@ -9,7 +9,7 @@ export async function apiFetch(path, method = "GET", bodyObject = null) {
     if (bodyObject) {
       requestConfig.body = JSON.stringify(bodyObject);
     }
-    const apiUrl = process.env.REACT_APP_DEV_API_URL;
+    const apiUrl = process.env.REACT_APP_API_URL;
     const httpResponse = await fetch(`${apiUrl}/${path}`, requestConfig);
     const responseObject = await httpResponse?.json();
     return { httpResponse, responseObject };
@@ -30,7 +30,7 @@ export async function apiPrivFetch(path, method = "GET", bodyObject = null) {
     if (bodyObject) {
       requestConfig.body = JSON.stringify(bodyObject);
     }
-    const apiUrl = process.env.REACT_APP_DEV_API_PRIV_URL;
+    const apiUrl = process.env.REACT_APP_API_PRIV_URL;
     const httpResponse = await fetch(`${apiUrl}/${path}`, requestConfig);
     const responseObject = await httpResponse?.json();
     return { httpResponse, responseObject };
@@ -48,7 +48,8 @@ export async function forwardFetch(path) {
         "Content-Type": "application/json"
       }
     };
-    const httpResponse = await fetch(`/forward/${path}`, requestConfig);
+    const apiUrl = process.env.REACT_APP_API_URL;
+    const httpResponse = await fetch(`${apiUrl}/forward/${path}`, requestConfig);
     const responseObject = await httpResponse?.json();
     return { httpResponse, responseObject };
   } catch (err) {

@@ -4,7 +4,7 @@ import "../../style/confirm.css";
 function Confirm({ onConfirm, message, setConfirmMessage }) {
   useEffect(() => {
     function handleKeyDown(event) {
-      if (event.key === "Tab" || event.key === "Enter") {
+      if (event.key === "Tab") {
         event.preventDefault();
       }
     }

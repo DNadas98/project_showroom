@@ -5,7 +5,7 @@ function GitRepoDetails({ repo }) {
   return (
     <>
       <div className="GitRepoTitle row">
-        <img src={repo?.owner?.avatar_url} alt="profile_picture" />
+        <img src={repo?.owner?.avatar_url} alt="profile_picture" loading="lazy" />
         <div className="column">
           <h2>{repo?.owner?.login}</h2>
           <a rel="noreferrer" target="_blank" href={repo?.html_url} className="blue">

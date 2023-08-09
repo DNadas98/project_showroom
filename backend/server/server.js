@@ -3,15 +3,17 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express");
 const cors = require("cors");
+const corsOptions = require("./config/corsConfig");
+const mongoose = require("mongoose");
 const dbConnection = require("./config/dbConnection");
+const cookieParser = require("cookie-parser");
 const { logRequest, logServed, logError } = require("./middleware/logger");
 const authRouter = require("./routes/auth/authRouter.js");
 const usersRouter = require("./routes/auth/usersRouter.js");
 const adminRouter = require("./routes/auth/adminRouter.js");
 const projectsRouter = require("./routes/projectsRouter.js");
-const cookieParser = require("cookie-parser");
-const corsOptions = require("./config/corsConfig");
-const mongoose = require("mongoose");
+const mailRouter = require("./routes/mailRouter.js");
+const openApiRouter = require("./routes/openApiRouter");
 
 //only for dev
 require("dotenv").config({ path: path.join(__dirname, "../../env/backend.env.dev") });
@@ -29,10 +31,12 @@ server.use(cookieParser());
 server.use(logRequest);
 
 //Routing
+server.use("/api_priv/mail", mailRouter);
 server.use("/api_priv/auth", authRouter);
 server.use("/api_priv/users", usersRouter);
 server.use("/api_priv/admin", adminRouter);
 server.use("/api/projects", projectsRouter);
+server.use("/api/forward", openApiRouter);
 
 //test server error route
 // eslint-disable-next-line no-unused-vars

@@ -1,4 +1,4 @@
-# Add API token and rename to frontend.env.dev
+# Rename to frontend.env.dev
 NODE_ENV=developement
 DOMAIN=localhost
 
@@ -6,6 +6,3 @@ PORT=3000
 
 SSL_CERT_PATH=localhost.crt
 SSL_KEY_PATH=localhost.key
-
-OPEN_API_URL=https://api.github.com
-OPEN_API_TOKEN="" # paste generated GitHub API token here (see README.md)

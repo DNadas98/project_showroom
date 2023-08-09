@@ -21,6 +21,7 @@ import AddProjectFile from "./pages/admin/projects/AddProjectFile";
 import UpdateProjectFile from "./pages/admin/projects/UpdateProjectFile";
 import Account from "./pages/admin/account/Account";
 import Landscape from "./pages/Landscape";
+import ContactMe from "./pages/ContactMe";
 
 const router = createBrowserRouter([
   /* public */
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
         path: "/showroom",
         element: <Showroom />
       },
+      { path: "/contacts", element: <ContactMe /> },
       {
         path: "/login",
         element: <Login />

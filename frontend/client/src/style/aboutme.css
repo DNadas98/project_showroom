@@ -67,8 +67,11 @@ li .codecool {
 
 .AboutMe ul ul {
   padding-left: 2rem;
-  list-style: circle;
   gap: 1rem;
+}
+
+.AboutMe ul ul li {
+  list-style: disc;
 }
 
 .AboutMe li {
@@ -101,14 +104,14 @@ li .codecool {
     flex-direction: column;
   }
 
-  .profile * {
+  .profile ul,
+  .profile li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
-
   .profile img {
     height: 10rem;
     width: 10rem;

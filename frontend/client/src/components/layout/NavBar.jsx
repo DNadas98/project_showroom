@@ -5,7 +5,8 @@ function NavBar() {
   return (
     <nav>
       <NavButton path="/" text="About Me" />
-      <NavButton path="/showroom" text="Project Showroom" />
+      <NavButton path="/showroom" text="Projects" />
+      <NavButton path="/contacts" text="Contacts" />
     </nav>
   );
 }

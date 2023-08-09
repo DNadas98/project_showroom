@@ -204,7 +204,6 @@ textarea {
   min-width: 20rem;
   min-height: 5rem;
   padding: 1rem;
-  justify-content: center;
   text-align: justify;
   color: var(--lightFaded);
 }
@@ -311,6 +310,10 @@ p.justify {
 
 table {
   text-align: left;
+}
+
+img {
+  image-rendering: optimizeSpeed;
 }
 
 .fit {

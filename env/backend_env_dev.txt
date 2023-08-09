@@ -16,3 +16,12 @@ REFRESH_TOKEN_EXPIRESIN=36000000
 #paste generated token secrets here (see README.md)
 ACCESS_TOKEN_SECRET=
 REFRESH_TOKEN_SECRET=
+
+#enter a SendGrid verified e-mail address
+CONTACT_MAIL_ADDRESS=
+#enter SendGrid API key
+MAIL_API_KEY=
+
+GIT_API_URL=https://api.github.com
+#enter the GitHub API token
+GIT_API_TOKEN=

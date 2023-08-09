@@ -32,7 +32,7 @@ function UserForm({ onSubmit, submitText, usernameError, passwordError }) {
         name="password"
         autoComplete="new-password"
         placeholder="Min. 8 characters"
-        minLength={8}
+        minLength={3}
         maxLength={30}
         required={true}
         title="Enter 8-30 characters"

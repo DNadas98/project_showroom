@@ -3,8 +3,8 @@ const axios = require("axios");
 async function forwardGitRequest(req, res, next) {
   try {
     const path = req.url.split("/git/")[1];
-    const baseUrl = process.env.OPEN_API_URL;
-    const accessToken = process.env.OPEN_API_TOKEN;
+    const baseUrl = process.env.GIT_API_URL;
+    const accessToken = process.env.GIT_API_TOKEN;
 
     const config = {
       headers: {

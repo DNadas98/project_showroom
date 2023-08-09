@@ -7,7 +7,7 @@ function UseAuthFetch() {
   const { auth } = useAuth();
   const logout = useLogout();
   const refresh = useRefresh();
-  const apiUrl = process.env.REACT_APP_DEV_API_PRIV_URL;
+  const apiUrl = process.env.REACT_APP_API_PRIV_URL;
 
   const apiFetch = useCallback(
     async (method, path, body) => {
