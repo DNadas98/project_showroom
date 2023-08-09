@@ -6,7 +6,7 @@ function useRefresh() {
   const logout = useLogout();
   async function refresh() {
     try {
-      const apiUrl = process.env.REACT_APP_DEV_API_PRIV_URL;
+      const apiUrl = process.env.REACT_APP_API_PRIV_URL;
       const path = "auth/refresh";
       const httpResponse = await fetch(`${apiUrl}/${path}`, {
         method: "GET",
