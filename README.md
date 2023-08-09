@@ -1,6 +1,6 @@
 # Project Showroom - [dnadas.com](https://dnadas.com)
 
-A [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) integration I have developed to present my projects dynamically through a full-stack web application.  
+My developer portfolio page, which utilizes my [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) integration I have developed to present my projects dynamically through a full-stack web application.  
 My application stores project data such as the username, project name and data for the code snippets of the projects in the database. The details of the projects and the source code for the snippets are fetched dynamically from the GitHub API based on the stored data. This ensures that the displayed information is always up-to-date and allows for simple management of the projects on the administrator page.  
 For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) and [Docker Compose](https://docs.docker.com/compose/) for containerization.
 
