@@ -1,24 +1,37 @@
 # Project Showroom - [dnadas.com](https://dnadas.com)
 
-My developer portfolio page, which utilizes my [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) integration I have developed to present my projects dynamically through a full-stack web application.  
-My application stores project data such as the username, project name and data for the code snippets of the projects in the database. The details of the projects and the source code for the snippets are fetched dynamically from the GitHub API based on the stored data. This ensures that the displayed information is always up-to-date and allows for simple management of the projects on the administrator page.  
-For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) and [Docker Compose](https://docs.docker.com/compose/) for containerization.
+### My developer portfolio page
+
+### Features:
+
+- My [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28) integration I have developed to present my projects dynamically through a full-stack web application. My application stores project data such as the username, project name and data for the code snippets of the projects in the database. The details of the projects and the source code for the snippets are fetched dynamically from the GitHub API based on the stored data. This ensures that the displayed information is always up-to-date and allows for simple management of the projects on the administrator page.
+- E-mail contact form using [SendGrid](https://sendgrid.com/) API and [npm package](https://www.npmjs.com/package/@sendgrid/mail)
+- For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) and [Docker Compose](https://docs.docker.com/compose/) for containerization.
 
 # Preview of the admin dashboard
-### Login page
 
-![login](https://github.com/DNadas98/project_showroom/blob/main/img/login.jpg)
-- (only accepts my admin account, which is not this example account)
 ### Overview of the projects
+
 ![admin 1](https://github.com/DNadas98/project_showroom/blob/main/img/admin01.jpg)
+
 ### Overview of the project files
+
 ![admin 2](https://github.com/DNadas98/project_showroom/blob/main/img/admin02.jpg)
+
 ### Project file editor form
+
 ![admin 3](https://github.com/DNadas98/project_showroom/blob/main/img/admin03.jpg)
+
 ### Account settings
+
 ![admin 4](https://github.com/DNadas98/project_showroom/blob/main/img/admin04.jpg)
 
 # Configure, Install and Run
+
+### ENV
+
+- Rename env/backend_env_dev to backend.env.dev
+- Same for frontend.env.dev
 
 ### Backend access, refresh token secret:
 
@@ -26,7 +39,7 @@ For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.
   ```js
   require("crypto").randomBytes(64).toString("hex");
   ```
-- paste: `/env/backend.env.dev` (rename the txt)
+- Paste: `/env/backend.env.dev`
 
 ### SSL localhost key & cert
 
@@ -50,8 +63,15 @@ For deployment, an option is to use [Nginx as reverse proxy](https://docs.nginx.
 
 ### Github API token
 
-- [guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
-- Add to `env/frontend.env.dev` (rename the txt): `OPEN_API_TOKEN`
+- Read the [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+- Get the API key from GitHub
+- Paste to `env/backend.env.dev`
+
+### SendGrid E-mail API
+
+- Read the [documentation](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
+- Get the API key from SendGrid website
+- Paste to `env/backend.env.dev`
 
 ### Configure MongoDB single node replica set
 
@@ -115,11 +135,11 @@ npm run populate
 
 ### Configure React app
 
-- rename `frontend/client/_env.txt` to `.env`
+- Rename `frontend/client/_env.txt` to `.env`
 
 ### Install & Run
 
-- backend
+- Backend
 
 ```bash
 cd backend/server
@@ -127,7 +147,7 @@ npm i
 npm run dev
 ```
 
-- frontend
+- Frontend
 
 ```bash
 cd frontend/server
