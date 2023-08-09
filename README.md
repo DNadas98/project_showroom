@@ -1,6 +1,4 @@
-# Project Showroom - [dnadas.com](https://dnadas.com)
-
-### My developer portfolio page
+### My developer portfolio page - [dnadas.com](https://dnadas.com)
 
 ### Features:
 
