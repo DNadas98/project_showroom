@@ -65,7 +65,7 @@ function AboutMe() {
       </div>
       <div className="column">
         <div className="codecool">
-          <span>I’m currently studying full-stack software developement at</span>
+          <span>I’m currently studying full-stack software development at</span>
           <a
             className="codecool blue underline"
             href="https://codecool.com/en/"
