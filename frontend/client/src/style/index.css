@@ -39,6 +39,12 @@ h3 {
   -moz-appearance: none;
 }
 
+p a,
+span {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
 body {
   --light: aliceblue;
   --lightFaded: rgba(240, 248, 255, 0.8);

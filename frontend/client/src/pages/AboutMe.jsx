@@ -10,6 +10,7 @@ function AboutMe() {
         <ul>
           <li>
             <h1>Hello, my name is Daniel Nadas.</h1>
+            <h3>I'm an aspiring full-stack software developer.</h3>
             <p>I’m currently working on:</p>
             <ul>
               <li>
