@@ -310,6 +310,16 @@ p {
   text-align: center;
 }
 
+pre p {
+  max-width: 80rem;
+}
+
+pre * {
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
 p.justify {
   text-align: justify;
 }
