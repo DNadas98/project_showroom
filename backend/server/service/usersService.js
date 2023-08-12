@@ -1,4 +1,4 @@
-const User = require("./User");
+const User = require("../model/User");
 const { startSession } = require("mongoose");
 const bcrypt = require("bcrypt");
 

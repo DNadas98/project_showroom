@@ -1,4 +1,4 @@
-const usersModel = require("../model/usersModel");
+const usersService = require("../service/usersService");
 const { logError } = require("../middleware/logger");
 const { usernameRegex, passwordRegex } = require("../model/regex");
 const { isValidObjectId } = require("mongoose");
@@ -10,7 +10,7 @@ async function readUserData(req, res) {
     if (!isValidObjectId(userid)) {
       return res.status(400).json({ message: "Invalid ID" });
     }
-    const dbQuery = await usersModel.readUser(userid);
+    const dbQuery = await usersService.readUser(userid);
     if (!dbQuery?.result || dbQuery.error || !dbQuery.status) {
       throw new Error(dbQuery.error ?? "Failed to read user data");
     } else if (dbQuery.status === 200) {
@@ -33,7 +33,7 @@ async function createUser(req, res) {
     if (!usernameRegex.test(username) || !passwordRegex.test(password)) {
       return res.status(400).json({ message: "Invalid user data" });
     }
-    const dbSession = await usersModel.createUserSession(username, password);
+    const dbSession = await usersService.createUserSession(username, password);
     if (!dbSession?.result || dbSession.error || !dbSession.status) {
       throw new Error(dbSession?.error ?? "");
     }
@@ -59,7 +59,7 @@ async function updateUser(req, res) {
     ) {
       return res.status(400).json({ message: "Invalid user data" });
     }
-    const dbSession = await usersModel.updateUserSession(
+    const dbSession = await usersService.updateUserSession(
       userid,
       newUsername,
       newPassword
@@ -81,7 +81,7 @@ async function deleteUser(req, res) {
     if (!isValidObjectId(userid)) {
       throw new Error("Invalid user ID at delete");
     }
-    const deletedUser = await usersModel.deleteUser(userid);
+    const deletedUser = await usersService.deleteUser(userid);
     if (!deletedUser?.result || deletedUser.error || !deletedUser.status) {
       throw new Error(deletedUser.error ?? "Failed to delete user");
     }

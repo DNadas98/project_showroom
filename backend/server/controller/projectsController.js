@@ -1,11 +1,11 @@
-const projectsModel = require("../model/projectsModel");
+const projectsService = require("../service/projectsService");
 const { isValidObjectId } = require("mongoose");
 const { logError } = require("../middleware/logger");
 
 //GET /api/projects/
 async function readAllProjects(req, res) {
   try {
-    const dbQuery = await projectsModel.readAllProjects();
+    const dbQuery = await projectsService.readAllProjects();
     if (!dbQuery?.result || dbQuery.error || !dbQuery.status) {
       throw new Error(dbQuery?.error ?? "Failed to read projects");
     }
@@ -26,7 +26,7 @@ async function readProjectById(req, res) {
     if (!id || !isValidObjectId(id)) {
       return res.status(400).json({ message: "Invalid project ID" });
     }
-    const dbQuery = await projectsModel.readProjectById(id);
+    const dbQuery = await projectsService.readProjectById(id);
     if (!dbQuery?.result || dbQuery.error || !dbQuery.status) {
       throw new Error(dbQuery?.error ?? "Failed to read project");
     }

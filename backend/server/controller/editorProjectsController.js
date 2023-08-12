@@ -1,4 +1,4 @@
-const projectsModel = require("../model/projectsModel");
+const projectsService = require("../service/projectsService");
 const { isValidObjectId } = require("mongoose");
 const { logError } = require("../middleware/logger");
 
@@ -9,7 +9,7 @@ async function createProject(req, res) {
     if (!user || !repo || !readme?.path) {
       return res.status(400).json({ message: "All fields are required" });
     }
-    const dbSession = await projectsModel.createProjectSession(user, repo, readme);
+    const dbSession = await projectsService.createProjectSession(user, repo, readme);
     if (!dbSession?.result || dbSession.error || !dbSession.status) {
       throw new Error(dbSession?.error ?? "");
     }
@@ -32,7 +32,7 @@ async function updateProject(req, res) {
       return res.status(400).json({ message: "All fields are required" });
     }
     if (!readme.language) readme.language = "markdown";
-    const dbSession = await projectsModel.updateProjectSession(_id, user, repo, readme);
+    const dbSession = await projectsService.updateProjectSession(_id, user, repo, readme);
     if (!dbSession?.result || dbSession.error || !dbSession?.status) {
       throw new Error(dbSession?.error ?? "");
     }
@@ -50,7 +50,7 @@ async function deleteProject(req, res) {
     if (!id || !isValidObjectId(id)) {
       return res.status(400).json({ message: "Invalid project ID" });
     }
-    const dbQuery = await projectsModel.deleteProject(id);
+    const dbQuery = await projectsService.deleteProject(id);
     if (!dbQuery?.result || dbQuery.error || !dbQuery.status) {
       throw new Error(dbQuery?.error ?? "");
     }
@@ -73,7 +73,7 @@ async function addFile(req, res) {
         .status(400)
         .json({ message: "File name, path and language are required" });
     }
-    const dbQuery = await projectsModel.addFile(
+    const dbQuery = await projectsService.addFile(
       projectId,
       name,
       path,
@@ -110,7 +110,7 @@ async function updateFile(req, res) {
         .status(400)
         .json({ message: "File name, path and language are required" });
     }
-    const dbQuery = await projectsModel.updateFile(
+    const dbQuery = await projectsService.updateFile(
       projectId,
       fileId,
       name,
@@ -142,7 +142,7 @@ async function deleteFile(req, res) {
     ) {
       return res.status(400).json({ message: "Invalid IDs" });
     }
-    const dbQuery = await projectsModel.deleteFile(projectId, fileId);
+    const dbQuery = await projectsService.deleteFile(projectId, fileId);
     if (!dbQuery?.result || dbQuery.error || !dbQuery.status) {
       throw new Error(dbQuery?.error ?? "");
     }
