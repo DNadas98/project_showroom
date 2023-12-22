@@ -1,4 +1,4 @@
-# My Developer Portfolio Page - [dnadas.com](https://dnadas.com)
+# My Developer Portfolio Page - [dnadas.com](https://dnadas.com) - down at the moment, under construction
 # Features
 
 ### Project showroom 
