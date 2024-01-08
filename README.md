@@ -1,5 +1,5 @@
-# My Developer Portfolio Page - [dnadas.com](https://dnadas.com) - down at the moment, under construction
-# Features
+# My Developer Portfolio Page - down at the moment, under construction
+## Features
 
 ### Project showroom 
 - Through the integration of the [GitHub REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28), my portfolio dynamically presents projects.
@@ -18,9 +18,9 @@
 - I forward the request to the backend API, add my private token, send the request via Axios, and send back a success / failure message based on the received response.
 - Although this method is safe and working correctly, I am already working on a safe config for my own Postfix SMTP, that could be set up on my VPS instead of relying on the third-party API.
 
-# Setup
+## Setup
 - See [setup.md](https://github.com/DNadas98/project_showroom/blob/main/setup.md) for help with configuring, installing and running the project.
 
 
-# Deployment
+## Deployment
 - The project is deployed on a VPS, for the production build I use [Docker Compose](https://docs.docker.com/compose/) for containerization and [Nginx as reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/).
